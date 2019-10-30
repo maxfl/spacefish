@@ -15,7 +15,7 @@ function __sf_lib_section -a color prefix content suffix
 	# Set the prompt as having been opened
 	set -g sf_prompt_opened true
 
-	set_color --bold $color
+	eval set_color --bold $color
 	echo -e -n $content
 	set_color normal
 
