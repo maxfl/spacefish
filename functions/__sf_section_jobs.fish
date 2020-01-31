@@ -21,7 +21,7 @@ function __sf_section_jobs -d "Show icon, if there's a working jobs in the backg
 
 	[ $SPACEFISH_JOBS_SHOW = false ]; and return
 
-	set jobs_amount (jobs | wc -l | xargs) # Zsh had a much more complicated command.
+    set jobs_amount (count (jobs -p))
 
 	if test $jobs_amount -eq 0
 		return
